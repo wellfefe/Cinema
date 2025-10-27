@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: cinema_web
+    ports:
+      - "8084:80"        # acessa em http://localhost:8080
+    volumes:
+      - ./site:/usr/share/nginx/html:ro        # seus arquivos .html, js/, etc.
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
