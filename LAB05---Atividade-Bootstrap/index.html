@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atividade — Bootstrap 5</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Estilos do projeto -->
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body class="bg-light">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark brand-gradient">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Projeto Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cards">Cards</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tabela">Tabela</a></li>
+            <li class="nav-item"><a class="nav-link" href="#form">Formulário</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER / HERO -->
+    <header id="inicio" class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold">Template responsivo com <span class="text-primary">Bootstrap 5</span></h1>
+            <p class="lead text-secondary">Estrutura pronta para você adaptar à sua atividade. Inclui navbar, grid responsivo, cards, tabela e formulário com validação.</p>
+            <div class="d-flex gap-2">
+              <a href="#cards" class="btn btn-primary btn-lg">Ver componentes</a>
+              <a href="#form" class="btn btn-outline-primary btn-lg">Ir para o formulário</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ratio ratio-16x9 shadow-soft rounded-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo exemplo" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CAROUSEL -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div id="carouselEx" class="carousel slide shadow-soft rounded-4 overflow-hidden" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/slide1.png" class="d-block w-100" alt="Slide 1" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Slide 1</h5><p>Legenda demonstrativa do primeiro slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/slide2.png" class="d-block w-100" alt="Slide 2" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Slide 2</h5><p>Outro texto de exemplo.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/slide3.png" class="d-block w-100" alt="Slide 3" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Slide 3</h5><p>Mais uma legenda ilustrativa.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEx" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselEx" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDS / GRID -->
+    <section id="cards" class="py-5">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-3">
+          <h2 class="h3 m-0">Exemplos de Cards</h2>
+          <div class="input-group w-auto">
+            <span class="input-group-text">🔎</span>
+            <input type="search" class="form-control" placeholder="Buscar..." />
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- Colunas responsivas -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-soft">
+              <img src="./img/card1.png" class="card-img-top" alt="Imagem do card" />
+              <div class="card-body">
+                <h5 class="card-title">Card 1</h5>
+                <p class="card-text">Texto do card com conteúdo rápido e objetivo.</p>
+                <a href="#" class="btn btn-primary w-100">Ação</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-soft">
+              <div class="card-body">
+                <h5 class="card-title">Card 2 (sem imagem)</h5>
+                <p class="card-text">Use as utilidades do Bootstrap para espaçamento, tipografia e alinhamento.</p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-secondary">Cancelar</button>
+                  <button class="btn btn-success">Salvar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-soft">
+              <div class="card-body">
+                <span class="badge text-bg-primary mb-2">Novo</span>
+                <h5 class="card-title">Card 3</h5>
+                <ul class="list-unstyled small text-secondary mb-4">
+                  <li>✔ Item 1</li>
+                  <li>✔ Item 2</li>
+                  <li>✔ Item 3</li>
+                </ul>
+                <a class="link-primary" href="#tabela">Ver a tabela ↓</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABELA -->
+    <section id="tabela" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="h3">Tabela com classes utilitárias</h2>
+        <div class="table-responsive shadow-soft rounded-4 overflow-hidden mt-3">
+          <table class="table table-striped table-hover align-middle m-0">
+            <thead class="table-dark">
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ana</td>
+                <td><span class="badge text-bg-success">Ativo</span></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-primary">Editar</button>
+                  <button class="btn btn-sm btn-outline-danger">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Bruno</td>
+                <td><span class="badge text-bg-warning">Pendente</span></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-primary">Editar</button>
+                  <button class="btn btn-sm btn-outline-danger">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Carla</td>
+                <td><span class="badge text-bg-secondary">Inativo</span></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-primary">Editar</button>
+                  <button class="btn btn-sm btn-outline-danger">Excluir</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-secondary small mt-2">Dica: envolva tabelas em <span class="code">.table-responsive</span> para evitar overflow no mobile.</p>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO COM VALIDAÇÃO -->
+    <section id="form" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-soft">
+              <div class="card-body p-4 p-md-5">
+                <h2 class="h3 mb-3">Formulário de Cadastro</h2>
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" required />
+                    <div class="invalid-feedback">Informe seu nome.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="voce@exemplo.com" required />
+                    <div class="invalid-feedback">Informe um e-mail válido.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha" minlength="6" required />
+                    <div class="invalid-feedback">Mínimo de 6 caracteres.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Interesses</label>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="int1" value="frontend" />
+                      <label class="form-check-label" for="int1">Frontend</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="int2" value="backend" />
+                      <label class="form-check-label" for="int2">Backend</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="int3" value="devops" />
+                      <label class="form-check-label" for="int3">DevOps</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select id="estado" class="form-select" required>
+                      <option value="" selected disabled>Escolha...</option>
+                      <option>GO</option>
+                      <option>SP</option>
+                      <option>RJ</option>
+                    </select>
+                    <div class="invalid-feedback">Selecione um estado.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" required />
+                    <div class="invalid-feedback">Informe a cidade.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="termos" required />
+                      <label class="form-check-label" for="termos">
+                        Aceito os termos de uso
+                      </label>
+                      <div class="invalid-feedback">Você deve aceitar os termos.</div>
+                    </div>
+                  </div>
+                  <div class="col-12 d-grid d-sm-flex gap-2">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                    <button class="btn btn-outline-secondary" type="reset">Limpar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 border-top bg-white">
+      <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+        <span class="text-secondary">© <span id="year"></span> Seu Nome</span>
+        <div class="d-flex gap-3">
+          <a class="link-secondary" href="#">Política de Privacidade</a>
+          <a class="link-secondary" href="#">Termos</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (Popper incluído) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script: validação de formulário + ano dinâmico -->
+    <script>
+      // Ano do rodapé
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Validação client-side Bootstrap
+      (() => {
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      })();
+    </script>
+  </body>
+</html>
