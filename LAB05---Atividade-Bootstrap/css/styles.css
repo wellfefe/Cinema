@@ -1,9 +1,0 @@
-
-:root { --brand: #6f42c1; }
-.brand-gradient { background: linear-gradient(120deg, var(--brand), #0d6efd); }
-.hero {
-  background: radial-gradient(1200px 600px at 10% 0%, rgba(13,110,253,.15), transparent),
-              radial-gradient(1200px 600px at 90% 0%, rgba(111,66,193,.15), transparent);
-}
-.shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
-.code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; }

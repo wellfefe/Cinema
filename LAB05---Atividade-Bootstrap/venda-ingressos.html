@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br"><head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CinemaWeb</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { background:#0f1117; color:#e6e6e6; }
+  .card { background:#151a22; border:1px solid #242b36; }
+  .form-control, .form-select { background:#0f141b; color:#e6e6e6; border-color:#2a3342; }
+  .form-control:focus, .form-select:focus { box-shadow:none; border-color:#0d6efd; }
+  a { text-decoration:none; }
+  .table { color:#e6e6e6; }
+  .table thead { background:#0d6efd22; }
+</style>
+
+</head><body>
+
+<!-- Navbar comum -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">CinemaWeb</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="cadastro-filmes.html">Filmes</a></li>
+        <li class="nav-item"><a class="nav-link" href="cadastro-salas.html">Salas</a></li>
+        <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Sessões</a></li>
+        <li class="nav-item"><a class="nav-link" href="sessoes.html">Listar Sessões</a></li>
+        <li class="nav-item"><a class="nav-link" href="venda-ingressos.html">Vender Ingresso</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-4">
+  <h2 class="mb-3">Venda de Ingressos</h2>
+  <div class="alert alert-warning small" id="hintSessoes" style="display:none">
+    Não há sessões cadastradas ainda. Cadastre em <a href="cadastro-sessoes.html" class="alert-link">Sessões</a>.
+  </div>
+  <div class="card p-4">
+    <form id="formVenda" class="row g-3">
+      <div class="col-12">
+        <label class="form-label">Sessão</label>
+        <select id="sessaoSelect" class="form-select" required></select>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Nome do Cliente</label>
+        <input type="text" id="cliente" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">CPF</label>
+        <input type="text" id="cpf" class="form-control" placeholder="000.000.000-00" required>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Assento</label>
+        <input type="text" id="assento" class="form-control" placeholder="Ex.: A10" required>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Tipo de Pagamento</label>
+        <select id="pagamento" class="form-select" required>
+          <option>Cartão</option><option>Pix</option><option>Dinheiro</option>
+        </select>
+      </div>
+      <div class="col-12 d-flex gap-2">
+        <button class="btn btn-success" type="submit">Confirmar Venda</button>
+        <a class="btn btn-outline-secondary" href="index.html">Voltar</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>pageInit('venda');</script>
+</body></html>
